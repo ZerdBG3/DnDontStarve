@@ -33,7 +33,7 @@
     - Small meals (like fries and soup) provide 4 levels
     - Big meals (like chicken and pork head) provide 8 levels
   * A character who is `Hungry` or `Unsatisfied` (between level 0 and 3) receives one level of exhaustion after long resting.
-  * A character who is `Fed` (between level 4 and 7) counts as half-day. Being `Fed` to days in a row causes one level of exhaustion.
+  * A character who is `Fed` (between level 4 and 7) counts as half-day. Being `Fed` two days in a row causes one level of exhaustion.
   * A character who is `Satiated` (level 8) decreases on level of exhaustion after long resting.
 
 * For the moment, I have no intention of implementing the **Water** part, but that might change in the future
