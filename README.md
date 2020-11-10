@@ -27,10 +27,14 @@
     - If the character already has one or more levels of exhaustion, the character takes two levels in either case.
 
 * However, considering the length of EA and the usual amount of long rests a player usually takes, I've decided to tweak those numbers a little bit. The end result is as follows:
-  * Characters who don't eat before taking a long rest suffer the effects of exhaustion.
-  * A character who is `Hungry` or `Unsatisfied` receives one level of exhaustion after long resting.
-  * A character who is `Fed` counts as half-day. Being `Fed` to days in a row causes one level of exhaustion.
-  * A character who is `Satiated` decreases on level of exhaustion after long resting.
+  * Food provides some level of satiation:
+    - Small snacks (like apple and carrots) provide 1 level
+    - Big snacks (like cheese and sausages) provide 2 levels
+    - Small meals (like fries and soup) provide 4 levels
+    - Big meals (like chicken and pork head) provide 8 levels
+  * A character who is `Hungry` or `Unsatisfied` (between level 0 and 3) receives one level of exhaustion after long resting.
+  * A character who is `Fed` (between level 4 and 7) counts as half-day. Being `Fed` to days in a row causes one level of exhaustion.
+  * A character who is `Satiated` (level 8) decreases on level of exhaustion after long resting.
 
 * For the moment, I have no intention of implementing the **Water** part, but that might change in the future
 * Following the PHB, exhaustion is cumullative and the effects are listed below:
