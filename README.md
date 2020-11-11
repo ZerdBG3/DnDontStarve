@@ -27,7 +27,7 @@
     - If the character already has one or more levels of exhaustion, the character takes two levels in either case.
 
 * However, considering the length of EA and the usual amount of long rests a player usually takes, I've decided to tweak those numbers a little bit. The end result is as follows:
-  * Food provides some level of satiation:
+  * Food provides some level of satiation (no more healing):
     - Small snacks (like apple and carrots) provide 1 level
     - Big snacks (like cheese and sausages) provide 2 levels
     - Small meals (like fries and soup) provide 4 levels
