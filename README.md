@@ -16,7 +16,7 @@
 
 # Features
 * Removes all healing from food
-* Food provides some level of satiation (no more healing):
+* Food provides some level of satiation:
   - Small snacks (like apple and carrots) provide 1 level
   - Big snacks (like cheese and sausages) provide 2 levels
   - Small meals (like fries and soup) provide 4 levels
