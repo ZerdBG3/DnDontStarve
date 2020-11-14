@@ -15,29 +15,17 @@
 * This mod's main objective is to repurpose food in BG3, removing the healing factor and implementing a Hunger system.
 
 # Features
-* According to PHB (page 185):
-  * Characters who don’t eat or drink suffer the effects of exhaustion. Exhaustion caused by lack of food or water can’t be removed until the character eats and drinks the full required amount.
-  * **Food**
-    - A character needs one pound of food per day and can make food last longer by subsisting on half rations. Eating half a pound of food in a day counts as half a day without food.
-    - A character can go without food for a number of days equal to 3 + his or her Constitution modifier (minimum 1). At the end of each day beyond that limit, a character automatically suffers one level of exhaustion.
-    - A normal day of eating resets the count of days without food to zero.
-  * **Water**
-    - A character needs one gallon of water per day, or two gallons per day if the weather is hot.
-    - A character who drinks only half that much water must succeed on a DC 15 Constitution saving throw or suffer one level of exhaustion at the end of the day. A character with access to even less water automatically suffers one level of exhaustion at the end of the day.
-    - If the character already has one or more levels of exhaustion, the character takes two levels in either case.
-
-* However, considering the length of EA and the usual amount of long rests a player usually takes, I've decided to tweak those numbers a little bit. The end result is as follows:
-  * Food provides some level of satiation (no more healing):
-    - Small snacks (like apple and carrots) provide 1 level
-    - Big snacks (like cheese and sausages) provide 2 levels
-    - Small meals (like fries and soup) provide 4 levels
-    - Big meals (like chicken and pork head) provide 8 levels
-  * A character who is `Hungry` or `Unsatisfied` (between level 0 and 3) receives one level of exhaustion after long resting.
-  * A character who is `Fed` (between level 4 and 7) counts as half-day. Being `Fed` two days in a row causes one level of exhaustion.
-  * A character who is `Satiated` (level 8) decreases on level of exhaustion after long resting.
-
-* For the moment, I have no intention of implementing the **Water** part, but that might change in the future
-* Following the PHB, exhaustion is cumullative and the effects are listed below:
+* Removes all healing from food
+* Food provides some level of satiation (no more healing):
+  - Small snacks (like apple and carrots) provide 1 level
+  - Big snacks (like cheese and sausages) provide 2 levels
+  - Small meals (like fries and soup) provide 4 levels
+  - Big meals (like chicken and pork head) provide 8 levels
+* Long resting consumes all levels of satiation and gives a status based on the level consumed
+  - A character who was `Hungry` (level 0) or `Unsatisfied` (level 1 to 3) receives one level of `Exhaustion`
+  - A character who was `Fed` (level 4 to 7) becomes `Starving`. At the first day, this status does nothing, but after another starving day, it will increase on level of `Exhaustion`
+  - A character who is `Satiated` (level 8) has their `Exhaustion` level decreased by one and removes `Starving` (if applicable)
+* The `Exhaustion` levels follow the exact rules from the PHB. Each level also applies the effects of all previous ones, and they are as follows:
 
 | Level | Effect |
 | :--: | :--: |
