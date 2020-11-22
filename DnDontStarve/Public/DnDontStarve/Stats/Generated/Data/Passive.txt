@@ -1,0 +1,5 @@
+new entry "ShortResting"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(SELF,DS_SHORT_REST,100,-1);"
+data "StatsFunctorContext" "OnShortRest"

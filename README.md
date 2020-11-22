@@ -15,6 +15,7 @@
 * This mod's main objective is to repurpose food in BG3, removing the healing factor and implementing a Hunger system.
 
 # Features
+## Food
 * Removes all healing from food
 * Food provides some level of satiation:
   - Small snacks (like apple and carrots) provide 1 level
@@ -24,7 +25,7 @@
 * Long resting consumes all levels of satiation and gives a status based on the level consumed
   - A character who was `Hungry` (level 0) or `Unsatisfied` (level 1 to 3) receives one level of `Exhaustion`
   - A character who was `Fed` (level 4 to 7) becomes `Starving`. At the first day, this status does nothing, but after another starving day, it will increase on level of `Exhaustion`
-  - A character who is `Satiated` (level 8) has their `Exhaustion` level decreased by one and removes `Starving` (if applicable)
+  - A character who was `Satiated` (level 8) has their `Exhaustion` level decreased by one and removes `Starving` (if applicable)
 * The `Exhaustion` levels follow the exact rules from the PHB. Each level also applies the effects of all previous ones, and they are as follows:
 
 | Level | Effect |
@@ -35,6 +36,13 @@
 | 4 | Hit point maximum halved |
 | 5 | Speed reduced to 0 |
 | 6 | Death |
+
+## Hit Dice
+* Allows 2 short rests per long rest
+* Short resting puts the characters in a standby mode and provides them with 2 new spells
+  - Regain Hit Points: spend 1 Hit Die to recover it's value plus the character's Constitution Modifier
+  - End Short Rest: Ends the short rest standby mode
+* Long resting recharges half the character's level worth of Hit Dice (rounded up)
 
 # Installing
 * Download the latest `.pak` file from [Releases](https://github.com/ZerdBG3/DnDontStarve/releases) and place it under `\Documents\Larian Studios\Baldur's Gate 3\Mods` (Create the `Mods` folder if it doesn't exist)
