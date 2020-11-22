@@ -1,0 +1,429 @@
+EVENTS
+
+
+EVENT DS_CharacterSetFedHelper_1
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+ON
+	FetchCharacterApplyStatusData(_Character, DS_FED_HELPER_1)
+ACTIONS
+	ListClear(_RemoveList)
+    Set(_Result,DS_FED_1)
+    ListAdd(_RemoveList, DS_FED_0)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_FED_1)
+	THEN
+		ListAdd(_RemoveList, DS_FED_1)
+		Set(_Result, DS_FED_2)
+	ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_2)
+	THEN
+		ListAdd(_RemoveList, DS_FED_2)
+		Set(_Result, DS_FED_3)
+	ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_3)
+	THEN
+		ListAdd(_RemoveList, DS_FED_3)
+		Set(_Result, DS_FED_4)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_4)
+	THEN
+		ListAdd(_RemoveList, DS_FED_4)
+		Set(_Result, DS_FED_5)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_5)
+	THEN
+		ListAdd(_RemoveList, DS_FED_5)
+		Set(_Result, DS_FED_6)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_6)
+	THEN
+		ListAdd(_RemoveList, DS_FED_6)
+		Set(_Result, DS_FED_7)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_7)
+	THEN
+		ListAdd(_RemoveList, DS_FED_7)
+		Set(_Result, DS_FED_8)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_8)
+	THEN
+		Set(_Result, null)
+	ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetFedHelper_2
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+ON
+	FetchCharacterApplyStatusData(_Character, DS_FED_HELPER_2)
+ACTIONS
+	ListClear(_RemoveList)
+	Set(_Result,DS_FED_2)
+    ListAdd(_RemoveList, DS_FED_0)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_FED_1)
+	THEN
+		ListAdd(_RemoveList, DS_FED_1)
+		Set(_Result, DS_FED_3)
+	ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_2)
+	THEN
+		ListAdd(_RemoveList, DS_FED_2)
+		Set(_Result, DS_FED_4)
+	ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_3)
+	THEN
+		ListAdd(_RemoveList, DS_FED_3)
+		Set(_Result, DS_FED_5)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_4)
+	THEN
+		ListAdd(_RemoveList, DS_FED_4)
+		Set(_Result, DS_FED_6)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_5)
+	THEN
+		ListAdd(_RemoveList, DS_FED_5)
+		Set(_Result, DS_FED_7)
+    ELIF "c1|c2"
+		CharacterHasStatus(_Character, DS_FED_6)
+        CharacterHasStatus(_Character, DS_FED_7)
+	THEN
+		ListAdd(_RemoveList, DS_FED_6)
+        ListAdd(_RemoveList, DS_FED_7)
+		Set(_Result, DS_FED_8)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_8)
+	THEN
+		Set(_Result, null)
+	ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetFedHelper_4
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+ON
+	FetchCharacterApplyStatusData(_Character, DS_FED_HELPER_4)
+ACTIONS
+	ListClear(_RemoveList)
+	Set(_Result,DS_FED_4)
+    ListAdd(_RemoveList, DS_FED_0)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_FED_1)
+	THEN
+		ListAdd(_RemoveList, DS_FED_1)
+		Set(_Result, DS_FED_5)
+	ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_2)
+	THEN
+		ListAdd(_RemoveList, DS_FED_2)
+		Set(_Result, DS_FED_6)
+	ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_3)
+	THEN
+		ListAdd(_RemoveList, DS_FED_3)
+		Set(_Result, DS_FED_7)
+    ELIF "c1|c2|c3|c4"
+		CharacterHasStatus(_Character, DS_FED_4)
+        CharacterHasStatus(_Character, DS_FED_5)
+        CharacterHasStatus(_Character, DS_FED_6)
+        CharacterHasStatus(_Character, DS_FED_7)
+	THEN
+		ListAdd(_RemoveList, DS_FED_4)
+        ListAdd(_RemoveList, DS_FED_5)
+        ListAdd(_RemoveList, DS_FED_6)
+        ListAdd(_RemoveList, DS_FED_7)
+		Set(_Result, DS_FED_8)
+    ELIF "c1"
+		CharacterHasStatus(_Character, DS_FED_8)
+	THEN
+		Set(_Result, null)
+	ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetHungerHelper
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+    INT:_Turns
+ON
+	FetchCharacterApplyStatusData(_Character, DS_HUNGRY_HELPER)
+ACTIONS
+	ListClear(_RemoveList)
+    Set(_Result, DS_STARVING_HELPER)
+    Set(_Turns,0)
+    ListAdd(_RemoveList, DS_FED_1)
+    ListAdd(_RemoveList, DS_FED_2)
+    ListAdd(_RemoveList, DS_FED_3)
+    ListAdd(_RemoveList, DS_FED_4)
+    ListAdd(_RemoveList, DS_FED_5)
+    ListAdd(_RemoveList, DS_FED_6)
+    ListAdd(_RemoveList, DS_FED_7)
+    ListAdd(_RemoveList, DS_FED_8)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_FED_8)
+	THEN
+		Set(_Result, DS_DECREASE_EXHAUSTION_HELPER)
+	ELIF "(c1|c2|c3|c4)&!c5"
+		CharacterHasStatus(_Character, DS_FED_4)
+        CharacterHasStatus(_Character, DS_FED_5)
+        CharacterHasStatus(_Character, DS_FED_6)
+        CharacterHasStatus(_Character, DS_FED_7)
+        CharacterHasStatus(_Character, DS_STARVING)
+	THEN
+        Set(_Result, DS_STARVING)
+        Set(_Turns,-1)
+	ENDIF
+
+    CharacterApplyStatus(_Character, DS_FED_0, -1)
+	RETURN(_RemoveList,_Result,_Turns)
+
+
+EVENT DS_CharacterSetStarvingHelper
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+ON
+	FetchCharacterApplyStatusData(_Character, DS_STARVING_HELPER)
+ACTIONS
+	ListClear(_RemoveList)
+    Set(_Result, DS_EXHAUSTED_1)
+    ListAdd(_RemoveList, DS_STARVING)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_EXHAUSTED_1)
+	THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_1)
+		Set(_Result, DS_EXHAUSTED_2)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_2)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_2)
+		Set(_Result, DS_EXHAUSTED_3)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_3)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_3)
+		Set(_Result, DS_EXHAUSTED_4)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_4)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_4)
+		Set(_Result, DS_EXHAUSTED_5)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_5)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_5)
+		Set(_Result, null)
+        CharacterDie(_Character)
+    ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetDecreaseExhaustionHelper
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+ON
+	FetchCharacterApplyStatusData(_Character, DS_DECREASE_EXHAUSTION_HELPER)
+ACTIONS
+	ListClear(_RemoveList)
+    Set(_Result, null)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_EXHAUSTED_1)
+	THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_1)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_2)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_2)
+		Set(_Result, DS_EXHAUSTED_1)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_3)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_3)
+		Set(_Result, DS_EXHAUSTED_2)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_4)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_4)
+		Set(_Result, DS_EXHAUSTED_3)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_EXHAUSTED_5)
+    THEN
+        ListAdd(_RemoveList, DS_EXHAUSTED_5)
+		Set(_Result, DS_EXHAUSTED_4)
+    ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetHitDiceHelper
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+ON
+	FetchCharacterApplyStatusData(_Character, DS_HIT_DICE_HELPER)
+ACTIONS
+	ListClear(_RemoveList)
+    Set(_Result, DS_HIT_DICE_1)
+
+	IF "c1"
+		CharacterHasStatus(_Character, DS_HIT_DICE_1)
+	THEN
+        ListAdd(_RemoveList, DS_HIT_DICE_1)
+        Set(_Result, DS_HIT_DICE_2)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_HIT_DICE_2)
+    THEN
+        ListAdd(_RemoveList, DS_HIT_DICE_2)
+		Set(_Result, DS_HIT_DICE_3)
+    ELIF "c1"
+        CharacterHasStatus(_Character, DS_HIT_DICE_3)
+    THEN
+        ListAdd(_RemoveList, DS_HIT_DICE_3)
+		Set(_Result, DS_HIT_DICE_4)
+    ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetRegenHitDiceHelper
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+    FLOAT:_Level
+ON
+	FetchCharacterApplyStatusData(_Character, DS_REGEN_HIT_DICE_HELPER)
+ACTIONS
+	ListClear(_RemoveList)
+    Set(_Result, DS_HIT_DICE_0)
+    ListAdd(_RemoveList, DS_HIT_DICE_MAX)
+
+    IF "c1"
+        CharacterGetStat(_Level,_Character, Level)
+    THEN
+        IF "c1"
+            CharacterHasStatus(_Character, DS_HIT_DICE_1)
+        THEN
+            ListAdd(_RemoveList, DS_HIT_DICE_1)
+            Set(_Result, DS_HIT_DICE_0)
+        ELIF "c1"
+            CharacterHasStatus(_Character, DS_HIT_DICE_2)
+        THEN
+            ListAdd(_RemoveList, DS_HIT_DICE_2)
+            Set(_Result, DS_HIT_DICE_1)
+            IF "c1"
+                IsGreaterThen(_Level, 2)
+            THEN
+                Set(_Result, DS_HIT_DICE_0)
+            ENDIF
+        ELIF "c1"
+            CharacterHasStatus(_Character, DS_HIT_DICE_3)
+        THEN
+            ListAdd(_RemoveList, DS_HIT_DICE_3)
+            Set(_Result, DS_HIT_DICE_1)
+            IF "c1"
+                IsGreaterThen(_Level, 5)
+            THEN
+                Set(_Result, DS_HIT_DICE_0)
+            ENDIF
+        ELIF "c1"
+            CharacterHasStatus(_Character, DS_HIT_DICE_4)
+        THEN
+            ListAdd(_RemoveList, DS_HIT_DICE_4)
+            Set(_Result, DS_HIT_DICE_2)
+            IF "c1"
+                IsGreaterThen(_Level, 5)
+            THEN
+                Set(_Result, DS_HIT_DICE_1)
+            ENDIF
+        ENDIF
+    ENDIF
+
+	RETURN(_RemoveList,_Result,-1)
+
+
+EVENT DS_CharacterSetHitDice_1
+VARS
+	CHARACTER:_Character
+    FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character, DS_HIT_DICE_1)
+ACTIONS
+	IF "c1&!c2"
+		CharacterGetStat(_Level,_Character, Level)
+        IsGreaterThen(_Level, 1)
+	THEN
+        CharacterApplyStatus(_Character, DS_HIT_DICE_MAX, -1)
+    ENDIF
+
+
+EVENT DS_CharacterSetHitDice_2
+VARS
+	CHARACTER:_Character
+    FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character, DS_HIT_DICE_2)
+ACTIONS
+	IF "c1&!c2"
+		CharacterGetStat(_Level,_Character, Level)
+        IsGreaterThen(_Level, 2)
+	THEN
+        CharacterApplyStatus(_Character, DS_HIT_DICE_MAX, -1)
+    ENDIF
+
+
+EVENT DS_CharacterSetHitDice_3
+VARS
+	CHARACTER:_Character
+    FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character, DS_HIT_DICE_3)
+ACTIONS
+	IF "c1&!c2"
+		CharacterGetStat(_Level,_Character, Level)
+        IsGreaterThen(_Level, 3)
+	THEN
+        CharacterApplyStatus(_Character, DS_HIT_DICE_MAX, -1)
+    ENDIF
+
+
+EVENT DS_CharacterSetHitDice_4
+VARS
+	CHARACTER:_Character
+    FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character, DS_HIT_DICE_4)
+ACTIONS
+	IF "c1&!c2"
+		CharacterGetStat(_Level,_Character, Level)
+        IsGreaterThen(_Level, 4)
+	THEN
+        CharacterApplyStatus(_Character, DS_HIT_DICE_MAX, -1)
+    ENDIF
+

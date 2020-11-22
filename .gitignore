@@ -3,3 +3,6 @@
 
 # Pak file with the latest release #
 *.pak
+
+# Block Foods.md while it's not ready
+Foods.md
