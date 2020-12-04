@@ -77,6 +77,7 @@ data "DisplayName" "Unsatisfied (1)"
 data "Description" "Character ate a little bit of food, but not enough"
 data "Icon" "Item_CONS_GEN_Food_Bowl_Soup_Mushroom_A"
 data "StackPriority" "1"
+data "OnRemoveFunctors" "ApplyStatus(DS_FED_0,100,-1)"
 
 new entry "DS_FED_2"
 type "StatusData"
