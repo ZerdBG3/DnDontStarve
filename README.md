@@ -21,7 +21,7 @@
   - Small snacks (like apple and carrots) provide 1 level
   - Big snacks (like cheese and sausages) provide 2 levels
   - Small meals (like fries and soup) provide 4 levels
-  - Big meals (like chicken and pork head) provide 8 levels
+  - Big meals (like chicken, pork head and even Goodberry) provide 8 levels
 * Long resting consumes all levels of satiation and gives a status based on the level consumed
   - A character who was `Hungry` (level 0) or `Unsatisfied` (level 1 to 3) receives one level of `Exhaustion`
   - A character who was `Fed` (level 4 to 7) becomes `Starving`. At the first day, this status does nothing, but after another starving day, it will increase on level of `Exhaustion`
@@ -38,7 +38,6 @@
 | 6 | Death |
 
 ## Hit Dice
-* Allows 2 short rests per long rest
 * Short resting puts the characters in a standby mode and provides them with 2 new spells
   - Regain Hit Points: spend 1 Hit Die to recover it's value plus the character's Constitution Modifier
   - End Short Rest: Ends the short rest standby mode
