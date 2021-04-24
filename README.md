@@ -37,12 +37,6 @@
 | 5 | Speed reduced to 0 |
 | 6 | Death |
 
-## Hit Dice
-* Short resting puts the characters in a standby mode and provides them with 2 new spells
-  - Regain Hit Points: spend 1 Hit Die to recover it's value plus the character's Constitution Modifier
-  - End Short Rest: Ends the short rest standby mode
-* Long resting recharges half the character's level worth of Hit Dice (rounded up)
-
 # Installing
 * Download the latest `.pak` file from [Releases](https://github.com/ZerdBG3/DnDontStarve/releases) and place it under `\Documents\Larian Studios\Baldur's Gate 3\Mods` (Create the `Mods` folder if it doesn't exist)
 * Use Laughing Leader's [Mod Manager](https://github.com/LaughingLeader/BG3ModManager) to set up your mod profile
