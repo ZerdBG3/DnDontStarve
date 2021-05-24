@@ -22,6 +22,7 @@
   - Big snacks (like cheese and sausages) provide 2 levels
   - Small meals (like fries and soup) provide 4 levels
   - Big meals (like chicken, pork head and even Goodberry) provide 8 levels
+* Adds `Hearty Dinner` (which should serve the purpose of Rations) to various traders and loot locations - this food provides full food for the day (level 8 of satiation)
 * Long resting consumes all levels of satiation and gives a status based on the level consumed
   - A character who was `Hungry` (level 0) or `Unsatisfied` (level 1 to 3) receives one level of `Exhaustion`
   - A character who was `Fed` (level 4 to 7) becomes `Starving`. At the first day, this status does nothing, but after another starving day, it will increase on level of `Exhaustion`

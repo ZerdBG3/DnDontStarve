@@ -1,0 +1,52 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+
+new treasuretable "Supply_CampFood"
+CanMerge 1
+new subtable "0,1;1,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "FoodTrader"
+CanMerge 1
+new subtable "2,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "WLD_CRA_Corpse_Fisher_Lover"
+CanMerge 1
+new subtable "1,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_AdventurerLostBackpack"
+CanMerge 1
+new subtable "0,1;1,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_Trader_Food"
+CanMerge 1
+new subtable "2,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_Entrance_Trade"
+CanMerge 1
+new subtable "0,1;1,1;2,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_Ethel"
+CanMerge 1
+new subtable "2,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "PLA_Cart_Generic"
+new subtable "1,1"
+object category "T_Supply_Tools",5,0,0,0,0,0,0,0
+object category "T_Supply_Fruits",1,0,0,0,0,0,0,0
+object category "T_Supply_MeatOnly",1,0,0,0,0,0,0,0
+object category "T_Supply_CheeseOnly",1,0,0,0,0,0,0,0
+object category "T_Supply_MeatAndCheese",1,0,0,0,0,0,0,0
+object category "T_Supply_Alcohol",2,0,0,0,0,0,0,0
+object category "T_Supply_Vegetables",4,0,0,0,0,0,0,0
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_MycoVillage_AlchemistDwarf_Trade"
+CanMerge 1
+new subtable "0,1;1,1;2,1"
+object category "I_CONS_FOOD_Dinner",1,0,0,0,0,0,0,0
