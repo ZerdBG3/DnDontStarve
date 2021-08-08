@@ -3,6 +3,9 @@
 <sub>Image Credit: [Mithra](https://github.com/thekeatonfox)</sub>
 =======
 
+# PATCH 5+
+* Starting on Patch 5, a new mechanic regarding long rests and food was developed, revolving around camp supplies. This means this mod has become obsolete, and the only feature it implements not available on Vanilla is the Exhaustion debuff on characters that rest without proper food intake. This feature will be implemented on [DnD Rebalancing](https://github.com/ZerdBG3/DnD-Rebalancing), while this mod is archived and kept public for those playing on Patch 4 or previous.
+
 # DISCLAIMER
 * The main goal behind an Early Access is to provide meaningful feedback to the developers. To do so, Larian implemented an automatic telemetry that will provide data for them automatically as you play
 * Since modding BG3 is not yet officially supported by Larian Studios, you might encounter unexpected problems that it's not in their current scope to fix. **PLEASE DISABLE AUTOMATIC TELEMETRY** and don't post bug reports on their official platforms, as you're playing an unsuported mod
